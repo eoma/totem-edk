@@ -1,6 +1,8 @@
 #include "AgentManager.h"
 #include "Agent.h"
 
+#include <algorithm>
+
 AgentManager::AgentManager()
 {
 }

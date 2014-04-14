@@ -10,7 +10,7 @@ Health::Health(Entity &owner, EntityManager &entity_manager)
 	health_property = owner.add<int>(PROPERTY_HEALTH, 100);
 	health_property.valueChanged().connect(this, &Health::on_health_changed);
 
-	owner.registerToEvent1<int>(EVENT_TAKE_DAMAGE).connect(this, &Health::on_take_damage);
+	owner.registerToEvent<int>(EVENT_TAKE_DAMAGE).connect(this, &Health::on_take_damage);
 }
 
 void Health::on_health_changed(const int &old_value, const int &new_value) 
@@ -21,7 +21,7 @@ void Health::on_health_changed(const int &old_value, const int &new_value)
 		std::cout << owner.get_name() << " died!" << std::endl;
 		alive = false;
 
-		owner.sendEvent0(EVENT_DIED, false);
+		owner.sendEvent<>(EVENT_DIED, false);
 		entity_manager.remove_entity(owner.get_name());
 	}
 }

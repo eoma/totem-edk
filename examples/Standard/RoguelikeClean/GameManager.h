@@ -22,11 +22,15 @@ public:
 	static void Shutdown();
 
 private:
-#if(_MSC_VER >= 1700)
+
+#ifdef MSVC
+	#if(_MSC_VER >= 1700)
 	friend class std::_Ref_count_obj<GameManager>;
-#else
+	#else
 	friend class std::tr1::_Ref_count_obj<GameManager>;
+	#endif
 #endif
+
 	GameManager();
 	static std::shared_ptr<GameManager> _instance;
 

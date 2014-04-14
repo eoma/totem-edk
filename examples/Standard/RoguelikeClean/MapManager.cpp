@@ -26,7 +26,7 @@ void MapManager::initialize(const Parser::MapsInfo &mapsInfo)
 			continue;
 
 		auto layer = std::make_shared<Map>((MapLayer)info->Layer, Vec2i(info->Width, info->Height));
-		layer->generationType = (info->GenerationType >= 0 && info->GenerationType < GENERATION_TYPE_COUNT) ? (GenerationType)info->GenerationType : GENERATION_NONE;
+		layer->generationType = (info->GenerationType >= 0 && info->GenerationType < GENERATION_TYPE_COUNT) ? (GenerationType)(info->GenerationType) : GENERATION_NONE;
 		layer->groundInViewColor = info->GroundInViewColor;
 		layer->wallInViewColor = info->WallInViewColor;
 		layer->groundInMemoryColor = info->GroundInMemoryColor;

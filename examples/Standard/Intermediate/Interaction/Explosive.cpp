@@ -12,7 +12,7 @@ Explosive::Explosive(Entity &owner, EntityManager &entity_manager)
 	explosion_damage_property = owner.add<int>(PROPERTY_EXPLOSION_DAMAGE, 100);
 	position_property = owner.add<Vec2i>(PROPERTY_POSITION, Vec2i());
 
-	owner.registerToEvent0(EVENT_DIED).connect(this, &Explosive::on_explode);
+	owner.registerToEvent<>(EVENT_DIED).connect(this, &Explosive::on_explode);
 }
 
 void Explosive::on_explode() 
@@ -34,7 +34,7 @@ void Explosive::on_explode()
 		if(explosion_radius_property >= distance)
 		{
 			std::cout << entity->get_name() << " is caught in the blast radius!" << std::endl; 
-			entity->sendEvent1<int>(EVENT_TAKE_DAMAGE, explosion_damage_property);
+			entity->sendEvent<int>(EVENT_TAKE_DAMAGE, explosion_damage_property);
 		}
 		else
 		{
