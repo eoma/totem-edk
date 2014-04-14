@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE resources>
+<resources>
+  <image name="RibbonButtonHot">
+    <image file="Ribbon/button-hot.png" />
+  </image>
+  <image name="RibbonDropDownButton">
+    <image file="Ribbon/dropdown-button.png" />
+  </image>
+  <image name="RibbonDropDownButtonHot">
+    <image file="Ribbon/dropdown-button-hot.png" />
+  </image>
+  <image name="RibbonDropDownGlyph">
+    <image file="Ribbon/dropdown-glyph.png" />
+  </image>
+  <image name="PropertyComponent">
+    <image file="PropertyComponent/propertycomponent.png" />
+  </image>
+  <image name="WorkspaceView">
+    <image file="Workspace/view.png" />
+  </image>
+  <image name="TabDockBackground">
+    <image file="Workspace/tabdock_background.png" />
+  </image>
+  <image name="TabDockTab">
+    <image file="Workspace/tabdock_tab.png" />
+  </image>
+  <image name="DocumentDockBackground">
+    <image file="Workspace/documentdock_background.png" />
+  </image>
+  <image name="DocumentDockTab">
+    <image file="Workspace/documentdock_tab.png" />
+  </image>
+  <image name="OverlayDockLeft">
+    <image file="Workspace/dock_left.png" />
+  </image>
+  <image name="OverlayDockRight">
+    <image file="Workspace/dock_right.png" />
+  </image>
+  <image name="OverlayDockUp">
+    <image file="Workspace/dock_up.png" />
+  </image>
+  <image name="OverlayDockCenter">
+    <image file="Workspace/dock_center.png" />
+  </image>
+  <image name="OverlayDockDown">
+    <image file="Workspace/dock_down.png" />
+  </image>
+  <image name="ToolWindowClose">
+    <image file="Icons/cross-small.png" />
+  </image>
+  <image name="ToolWindowCloseHot">
+    <image file="Icons/cross-small-hot.png" />
+  </image>
+  <sprite name="IconFolderOpen">
+    <image file="Icons/folder_open.png" />
+  </sprite>
+  <sprite name="IconFolderClosed">
+    <image file="Icons/folder_closed.png" />
+  </sprite>
+  <sprite name="IconDocument">
+    <image file="Icons/document.png" />
+  </sprite>
+  <sprite name="IconSolution">
+    <image file="Icons/solution1.png" />
+  </sprite>
+  <sprite name="IconProject">
+    <image file="Icons/project1.png" />
+  </sprite>
+  <sprite name="GameIdeLogo">
+    <image file="Logos/gameide.png" />
+  </sprite>
+  <image name="IconSolutionExplorer">
+    <image file="Icons/solution1.png" />
+  </image>
+  <image name="IconClipboardCopy">
+    <image file="Icons/clipboard-copy.png" />
+  </image>
+  <image name="IconClipboardCut">
+    <image file="Icons/clipboard-cut.png" />
+  </image>
+  <image name="IconClipboardPaste24">
+    <image file="Icons/clipboard-paste-24.png" />
+  </image>
+  <image name="IconMacroStop">
+    <image file="Icons/macro-stop.png" />
+  </image>
+  <image name="IconMacroRun24">
+    <image file="Icons/macro-run.png" />
+  </image>
+  <image name="IconMacroRecord">
+    <image file="Icons/macro-record.png" />
+  </image>
+  <image name="IconEditUppercase">
+    <image file="Icons/edit-uppercase.png" />
+  </image>
+  <image name="IconEditLowercase">
+    <image file="Icons/edit-lowercase.png" />
+  </image>
+  <image name="IconEditUndo">
+    <image file="Icons/edit-undo.png" />
+  </image>
+  <image name="IconEditRedo">
+    <image file="Icons/edit-redo.png" />
+  </image>
+  <image name="IconNew24">
+    <image file="Icons/document-24.png" />
+  </image>
+  <image name="IconOpen24">
+    <image file="Icons/folder-open-24.png" />
+  </image>
+  <image name="IconSave24">
+    <image file="Icons/disk-black-24.png" />
+  </image>
+  <image name="IconSaveAs24">
+    <image file="Icons/disk-24.png" />
+  </image>
+  <image name="IconAbout24">
+    <image file="Icons/information-24.png" />
+  </image>
+  <image name="IconExit24">
+    <image file="Icons/switch-24.png" />
+  </image>
+
+  <ribbon-setup name="RibbonSetupMainWindow">
+    <page name="View" importance="300">
+      <section name="Windows" importance="100" width="150">
+        <button name="view.solution-explorer">
+          <geometry>8, 12, 134, 22</geometry>
+          <text>Solution Explorer</text>
+          <image>IconSolutionExplorer</image>
+        </button>
+      </section>
+    </page>
+  </ribbon-setup>
+  
+  <ribbon-setup name="RibbonSetupTextEditor">
+    <page name="Home" importance="100">
+      <section name="Clipboard" importance="100" width="112">
+        <button name="edit.paste">
+          <geometry>8, 12, 40, 55</geometry>
+          <text>Paste</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="edit.copy">
+          <geometry>47, 15, 58, 22</geometry>
+          <text>Copy</text>
+          <image>IconClipboardCopy</image>
+        </button>
+        <button name="edit.cut">
+          <geometry>47, 41, 58, 22</geometry>
+          <text>Cut</text>
+          <image>IconClipboardCut</image>
+        </button>
+      </section>
+      <section name="File" importance="101" width="56">
+        <button name="file.save">
+          <geometry>8, 12, 38, 55</geometry>
+          <text>Save</text>
+          <image>IconSave24</image>
+          <big>true</big>
+        </button>
+      </section>
+      <section name="Edit" importance="102" width="163">
+        <button name="edit.undo">
+          <geometry>8, 15, 58, 22</geometry>
+          <text>Undo</text>
+          <image>IconEditUndo</image>
+        </button>
+        <button name="edit.redo">
+          <geometry>8, 41, 58, 22</geometry>
+          <text>Redo</text>
+          <image>IconEditRedo</image>
+        </button>
+        <button name="edit.uppercase">
+          <geometry>65, 15, 90, 22</geometry>
+          <text>Uppercase</text>
+          <image>IconEditUppercase</image>
+        </button>
+        <button name="edit.lowercase">
+          <geometry>65, 41, 90, 22</geometry>
+          <text>Lowercase</text>
+          <image>IconEditLowercase</image>
+        </button>
+      </section>
+      <section name="Macro" importance="103" width="122">
+        <button name="macro.run">
+          <geometry>8, 12, 38, 55</geometry>
+          <text>Run</text>
+          <image>IconMacroRun24</image>
+          <big>true</big>
+        </button>
+        <button name="macro.record">
+          <geometry>46, 15, 68, 22</geometry>
+          <text>Record</text>
+          <image>IconMacroRecord</image>
+        </button>
+        <button name="macro.stop">
+          <geometry>46, 41, 68, 22</geometry>
+          <text>Stop</text>
+          <image>IconMacroStop</image>
+        </button>
+      </section>
+    </page>
+    <page name="View" importance="300">
+      <section name="Whitespace" importance="104" width="142">
+        <combobox name="view.wsmode">
+          <geometry>8, 14, 126, 22</geometry>
+          <item id="0">Invisible</item>
+          <item id="1">Visible Always</item>
+          <item id="2">Visible After Indent</item>
+        </combobox>
+        <checkbox name="view.eol">
+          <geometry>8, 41, 126, 22</geometry>
+          <text>Show end of line</text>
+        </checkbox>
+      </section>
+    </page>
+  </ribbon-setup>
+
+  <ribbon-setup name="RibbonSetupContinent">
+    <page name="Landscape" importance="200">
+      <section name="Import" width="68">
+        <button name="landscape.import.heights">
+          <geometry>8, 12, 50, 55</geometry>
+          <text>Heights</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+      </section>
+      <!--<section name="Procedural" width="179">
+        <button name="landscape.procedural.erode-area">
+          <geometry>8, 5, 50, 62</geometry>
+          <text>Erode Area</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.procedural.snoise-area">
+          <geometry>63, 5, 50, 62</geometry>
+          <text>S-noise Area</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.procedural.plant-trees">
+          <geometry>118, 5, 50, 62</geometry>
+          <text>Plant Trees</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+      </section>-->
+      <section name="Tools" width="454">
+        <button name="landscape.tools.paint">
+          <geometry>8, 5, 50, 62</geometry>
+          <text>Paint</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.tools.select-rect">
+          <geometry>63, 5, 50, 62</geometry>
+          <text>Select Rect</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.tools.select-ellipse">
+          <geometry>118, 5, 50, 62</geometry>
+          <text>Select Ellipse</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.tools.pick-material">
+          <geometry>173, 5, 50, 62</geometry>
+          <text>Pick Material</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.tools.height-adjust">
+          <geometry>228, 5, 50, 62</geometry>
+          <text>Height Adjust</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.tools.height-smooth">
+          <geometry>283, 5, 50, 62</geometry>
+          <text>Height Smooth</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.tools.height-flatten">
+          <geometry>338, 5, 50, 62</geometry>
+          <text>Height Flatten</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="landscape.tools.object-select">
+          <geometry>393, 5, 50, 62</geometry>
+          <text>Select Objects</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+      </section>
+      <section name="Paintbrush" width="425">
+        <label name="landscape.paintbrush.label.opacity">
+          <geometry>8, 14, 40, 22</geometry>
+          <text>Opacity</text>
+        </label>
+        <spin name="landscape.paintbrush.opacity">
+          <geometry>55, 12, 80, 22</geometry>
+        </spin>
+        <label name="landscape.paintbrush.label.scale">
+          <geometry>8, 41, 40, 22</geometry>
+          <text>Scale</text>
+        </label>
+        <spin name="landscape.paintbrush.scale">
+          <geometry>55, 39, 80, 22</geometry>
+        </spin>
+        
+        <label name="landscape.paintbrush.label.radius">
+          <geometry>142, 14, 40, 22</geometry>
+          <text>Radius</text>
+        </label>
+        <spin name="landscape.paintbrush.radius">
+          <geometry>189, 12, 80, 22</geometry>
+        </spin>
+        <label name="landscape.paintbrush.label.shape">
+          <geometry>142, 41, 40, 22</geometry>
+          <text>Shape</text>
+        </label>
+        <combobox name="landscape.paintbrush.shape">
+          <geometry>189, 39, 80, 22</geometry>
+          <item id="0">Circle</item>
+          <item id="1">Square</item>
+          <item id="2">Diamond</item>
+        </combobox>
+
+        <label name="landscape.paintbrush.label.hardness">
+          <geometry>278, 14, 40, 22</geometry>
+          <text>Hardness</text>
+        </label>
+        <spin name="landscape.paintbrush.hardness">
+          <geometry>335, 12, 80, 22</geometry>
+        </spin>
+        <label name="landscape.paintbrush.label.spacing">
+          <geometry>278, 41, 40, 22</geometry>
+          <text>Spacing</text>
+        </label>
+        <spin name="landscape.paintbrush.spacing">
+          <geometry>335, 39, 80, 22</geometry>
+        </spin>
+
+      </section>
+    </page>
+  </ribbon-setup>
+
+  <ribbon-setup name="RibbonSetupTreeGenerator">
+    <page name="Stem" importance="200">
+      <section name="Axis" width="410">
+        <label name="stem.axis.label.length">
+          <geometry>8, 14, 40, 22</geometry>
+          <text>Length</text>
+        </label>
+        <spin name="stem.axis.length">
+          <geometry>55, 12, 80, 22</geometry>
+        </spin>
+        <label name="stem.axis.label.variation">
+          <geometry>8, 41, 40, 22</geometry>
+          <text>Variation</text>
+        </label>
+        <spin name="stem.axis.variation">
+          <geometry>55, 39, 80, 22</geometry>
+        </spin>
+        <curve-editor name="stem.axis.offset-influence">
+          <geometry>142, 13, 96, 47</geometry>
+        </curve-editor>
+        <label name="stem.axis.label.resolution">
+          <geometry>247, 14, 80, 22</geometry>
+          <text>Resolution</text>
+        </label>
+        <spin name="stem.axis.resolution">
+          <geometry>324, 12, 80, 22</geometry>
+        </spin>
+        <label name="stem.axis.label.axis-variation">
+          <geometry>247, 41, 80, 22</geometry>
+          <text>Axis variation</text>
+        </label>
+        <spin name="stem.axis.axis-variation">
+          <geometry>324, 39, 80, 22</geometry>
+        </spin>
+      </section>
+      <section name="Cross-section" width="255">
+        <label name="stem.cross-section.label.radius">
+          <geometry>8, 14, 40, 22</geometry>
+          <text>Radius</text>
+        </label>
+        <spin name="stem.cross-section.radius">
+          <geometry>65, 12, 80, 22</geometry>
+        </spin>
+        <label name="stem.cross-section.label.resolution">
+          <geometry>8, 41, 40, 22</geometry>
+          <text>Resolution</text>
+        </label>
+        <spin name="stem.cross-section.resolution">
+          <geometry>65, 39, 80, 22</geometry>
+        </spin>
+        <curve-editor name="stem.cross-section.profile">
+          <geometry>152, 13, 96, 47</geometry>
+        </curve-editor>
+      </section>
+      <section name="Phototropism" width="112">
+        <curve-editor name="stem.phototropism.distribution">
+          <geometry>8, 13, 96, 47</geometry>
+        </curve-editor>
+      </section>
+      <section name="Visibility range" width="155">
+        <label name="stem.visibility-range.label.min-lod">
+          <geometry>8, 14, 50, 22</geometry>
+          <text>Min. LOD</text>
+        </label>
+        <spin name="stem.visibility-range.min-lod">
+          <geometry>65, 12, 80, 22</geometry>
+        </spin>
+        <label name="stem.visibility-range.label.max-lod">
+          <geometry>8, 41, 50, 22</geometry>
+          <text>Max. LOD</text>
+        </label>
+        <spin name="stem.visibility-range.max-lod">
+          <geometry>65, 39, 80, 22</geometry>
+        </spin>
+      </section>
+      <section name="Misc" width="480">
+        <label name="stem.misc.label.width">
+          <geometry>8, 14, 40, 22</geometry>
+          <text>Width</text>
+        </label>
+        <spin name="stem.misc.width">
+          <geometry>55, 12, 80, 22</geometry>
+        </spin>
+        <label name="stem.misc.label.thickness">
+          <geometry>8, 41, 40, 22</geometry>
+          <text>Thickness</text>
+        </label>
+        <spin name="stem.misc.thickness">
+          <geometry>55, 39, 80, 22</geometry>
+        </spin>
+        <curve-editor name="stem.misc.curvature">
+          <geometry>142, 13, 96, 47</geometry>
+        </curve-editor>
+        <label name="stem.misc.label.sections">
+          <geometry>247, 28, 80, 22</geometry>
+          <text>Sections</text>
+        </label>
+        <spin name="stem.misc.sections">
+          <geometry>294, 26, 80, 22</geometry>
+        </spin>
+        <curve-editor name="stem.misc.scaling">
+          <geometry>377, 13, 96, 47</geometry>
+        </curve-editor>
+      </section>
+    </page>
+    <page name="Material" importance="200">
+      <section name="Color" width="183">
+        <button name="material.color.base-color">
+          <geometry>8, 12, 50, 55</geometry>
+          <text>Color</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="material.color.diffuse-texture">
+          <geometry>63, 12, 50, 55</geometry>
+          <text>Texture</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+        <button name="material.color.normal-texture">
+          <geometry>118, 12, 50, 55</geometry>
+          <text>Normals</text>
+          <image>IconClipboardPaste24</image>
+          <big>true</big>
+        </button>
+      </section>
+      <section name="Texture coordinates" width="270">
+        <label name="material.texture-coordinates.label.u-scale">
+          <geometry>8, 14, 40, 22</geometry>
+          <text>U-Scale</text>
+        </label>
+        <spin name="material.texture-coordinates.u-scale">
+          <geometry>55, 12, 80, 22</geometry>
+        </spin>
+        <label name="material.texture-coordinates.label.v-scale">
+          <geometry>8, 41, 40, 22</geometry>
+          <text>V-Scale</text>
+        </label>
+        <spin name="material.texture-coordinates.v-scale">
+          <geometry>55, 39, 80, 22</geometry>
+        </spin>
+        <combobox name="material.texture-coordinates.v-mode">
+          <geometry>142, 39, 96, 22</geometry>
+          <item id="0">Relative</item>
+          <item id="1">Absolute</item>
+        </combobox>
+      </section>
+      <section name="Mode" width="270">
+        <checkbox name="material.mode.double-sided">
+          <geometry>8, 13, 100, 22</geometry>
+          <text>Double-sided</text>
+        </checkbox>
+        <checkbox name="material.mode.transparent">
+          <geometry>8, 40, 100, 22</geometry>
+          <text>Transparent</text>
+        </checkbox>
+        <label name="material.mode.label.billboard">
+          <geometry>112, 14, 56, 22</geometry>
+          <text>Billboard:</text>
+        </label>
+        <combobox name="material.mode.billboard">
+          <geometry>168, 12, 90, 22</geometry>
+          <item id="0">Disabled</item>
+          <item id="1">Spherical</item>
+          <item id="2">Cylindrical</item>
+        </combobox>
+      </section>
+      <section name="Transparency" width="215">
+        <label name="material.transparency.label.fade-in">
+          <geometry>8, 14, 40, 22</geometry>
+          <text>Fade-in</text>
+        </label>
+        <spin name="material.transparency.fade-in">
+          <geometry>55, 12, 80, 22</geometry>
+        </spin>
+        <label name="material.transparency.label.fade-out">
+          <geometry>8, 41, 40, 22</geometry>
+          <text>Fade-out</text>
+        </label>
+        <spin name="material.transparency.fade-out">
+          <geometry>55, 39, 80, 22</geometry>
+        </spin>
+        <checkbox name="material.transparency.enabled">
+          <geometry>142, 28, 55, 22</geometry>
+          <text>Enabled</text>
+        </checkbox>
+      </section>
+    </page>
+    <page name="Branching" importance="200">
+      <section name="Parameters" width="864">
+        <label name="branching.parameters.label.density">
+          <geometry>8, 14, 40, 22</geometry>
+          <text>Density</text>
+        </label>
+        <spin name="branching.parameters.density">
+          <geometry>55, 12, 80, 22</geometry>
+        </spin>
+        <label name="branching.parameters.label.variation">
+          <geometry>8, 41, 40, 22</geometry>
+          <text>Variation</text>
+        </label>
+        <spin name="branching.parameters.variation">
+          <geometry>55, 39, 80, 22</geometry>
+        </spin>
+        <label name="branching.parameters.label.multiplicity">
+          <geometry>142, 14, 60, 22</geometry>
+          <text>Multiplicity</text>
+        </label>
+        <spin name="branching.parameters.multiplicity">
+          <geometry>205, 12, 80, 22</geometry>
+        </spin>
+        <label name="branching.parameters.label.min-offset">
+          <geometry>142, 41, 60, 22</geometry>
+          <text>Min. offset</text>
+        </label>
+        <spin name="branching.parameters.min-offset">
+          <geometry>205, 39, 80, 22</geometry>
+        </spin>
+        <label name="branching.parameters.label.max-offset">
+          <geometry>296, 14, 60, 22</geometry>
+          <text>Max. offset</text>
+        </label>
+        <spin name="branching.parameters.max-offset">
+          <geometry>359, 12, 80, 22</geometry>
+        </spin>
+        <label name="branching.parameters.label.rev-angle">
+          <geometry>296, 41, 60, 22</geometry>
+          <text>Rev-angle</text>
+        </label>
+        <spin name="branching.parameters.rev-angle">
+          <geometry>359, 39, 80, 22</geometry>
+        </spin>
+        <label name="branching.parameters.label.variation2">
+          <geometry>450, 14, 55, 22</geometry>
+          <text>Variation</text>
+        </label>
+        <spin name="branching.parameters.variation2">
+          <geometry>513, 12, 80, 22</geometry>
+        </spin>
+        <label name="branching.parameters.label.rot-angle">
+          <geometry>450, 41, 55, 22</geometry>
+          <text>Rot-angle</text>
+        </label>
+        <spin name="branching.parameters.rot-angle">
+          <geometry>513, 39, 80, 22</geometry>
+        </spin>
+        <curve-editor name="branching.parameters.declination">
+          <geometry>604, 13, 96, 47</geometry>
+        </curve-editor>
+        <label name="branching.parameters.label.variation3">
+          <geometry>712, 14, 55, 22</geometry>
+          <text>Variation</text>
+        </label>
+        <spin name="branching.parameters.variation3">
+          <geometry>775, 12, 80, 22</geometry>
+        </spin>
+      </section>
+    </page>
+  </ribbon-setup>
+</resources>

@@ -1,0 +1,285 @@
+﻿
+dummy
+{
+}
+
+ribbon
+{
+	border-image-source:url('res:Ribbon');
+	width:271px;
+	height:117px;
+	/*height:95px;*/
+	border-image-slice:8 8 50  8 fill;
+	border-image-width:8px 8px 50px px;
+	font-family:tahoma;
+	font-size:11px;
+}
+
+ribbon button.menu
+{
+	border-image-source:url('res:RibbonMenuButton');
+	border-image-slice:0 0 0 0 fill;
+	border-image-width:0px 0px 0px 0px;
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	width:56px;
+	height:22px;
+	border-left:0px;
+	border-right:0px;
+	border-top:0px;
+	border-bottom:0px;
+}
+
+ribbon button.menu:hot
+{
+	background-image:url('res:RibbonMenuButtonHot');
+}
+
+ribbon tab
+{
+	border-image-source:none;
+	width:40px;
+	height:23px;
+	border-image-slice:8 8 8  8 fill;
+	border-image-width:8px 8px 8px px;
+	font-family:tahoma;
+}
+
+ribbon tab:selected
+{
+	border-image-source:url('res:RibbonTab');
+}
+
+ribbon tab-background
+{
+	border-image-source:url('res:RibbonTabBackground');
+	border-image-slice:120 120 54  8 fill;
+	border-image-width:120px 120px 54px px;
+	font-family:tahoma;
+}
+
+ribbon-section
+{
+	border-image-source:url('res:RibbonSection');
+	width:70px;
+	height:87px;
+	border-image-slice:8 8 24  16 fill;
+	border-image-width:8px 8px 24px px;
+}
+
+ribbon-section button
+{
+	border-image-source:none;
+	padding-left: 4;
+	padding-right: 4;
+	padding-top: 4;
+	padding-bottom: 4;
+	align: left;
+}
+
+ribbon-section button.big
+{
+	vertical-align:top;
+	align: center;
+}
+
+ribbon-section button:hot
+{
+	border-image-source:url('res:RibbonButtonHot');
+	border-image-slice:8 8 1  1 fill;
+	border-image-width:8px 8px 1px px;
+}
+
+ribbon-section button:pressed
+{
+	border-image-source:url('res:RibbonButtonPressed');
+	border-image-slice:8 8 1  1 fill;
+	border-image-width:8px 8px 1px px;
+}
+
+ribbon-section button:toggled
+{
+	border-image-source:url('res:RibbonButtonToggled');
+	border-image-slice:8 8 1  1 fill;
+	border-image-width:8px 8px 1px px;
+}
+
+ribbon-section button:toggled:hot
+{
+	border-image-source:url('res:RibbonButtonHot');
+	border-image-slice:8 8 1  1 fill;
+	border-image-width:8px 8px 1px px;
+}
+
+ribbon-section button:toggled:pressed:hot
+{
+	border-image-source:url('res:RibbonButtonPressed');
+	border-image-slice:8 8 1  1 fill;
+	border-image-width:8px 8px 1px px;
+}
+
+ribbon-menu
+{
+	border-image-source:url('res:RibbonMenuBackground');
+	border-image-slice:2 222 27  22 fill;
+	border-image-width:2px 222px 27px px;
+}
+
+ribbon-menu menu-item
+{
+	width:216px;
+	height:44px;
+	font-family: Arial;
+	font-size:11px;
+}
+
+ribbon-menu menu-item:selected
+{
+	border-image-source:url('res:RibbonMenuItemSelected');
+}
+
+ribbon-menu menu-item:separator
+{
+	border-image-source:url('res:RibbonMenuItemSeparator');
+	width:217px;
+	height:3px;
+}
+
+ribbon-section button.dropdown
+{
+	border-image-slice:12 3 3  3 fill;
+	border-image-width:12px 3px 3px px;
+	border-image-source:url('res:RibbonDropDownButton');
+	padding-left: 4;
+	padding-right: 12;
+	padding-top: 4;
+	padding-bottom: 4;
+	align: right;
+}
+
+ribbon-section button.dropdown:hot
+{
+	border-image-source:url('res:RibbonDropDownButtonHot');
+}
+
+ribbon-section button.dropdown:pressed
+{
+	border-image-source:url('res:RibbonButtonPressed');
+}
+
+ribbon-section button.dropdown:pressed:toggled
+{
+	border-image-source:url('res:RibbonButtonPressed');
+}
+
+ribbon-section button.dropdown:toggled
+{
+	border-image-source:url('res:RibbonButtonToggled');
+}
+
+ribbon-section button.dropdown:hot:toggled
+{
+	border-image-source:url('res:RibbonDropDownButtonHot');
+}
+
+combobox.ribbon
+{
+	border-image-slice:3 3 3 3 fill;
+	border-image-width:3px 3px 3px 3px;
+	border-image-repeat:stretch; 
+	border-image-source:url('res:ListViewBorder');
+}
+
+combobox lineedit.ribbon
+{
+	border-image-slice:2 2 2 2 fill;
+	border-image-width:2px 2px 2px 2px;
+	border-image-repeat:stretch; 
+	border-image-source:none;
+	background-color:;
+
+	border-top:0px;
+	border-left:6px;
+	border-right:16px;
+	border-bottom:0px;
+	
+	color:black;
+	text-color-selected:white;
+}
+
+combobox lineedit.ribbon:normal
+{
+	border-image-source:none; 
+}
+
+combobox lineedit.ribbon:hot
+{
+	border-image-source:none;
+}
+
+combobox lineedit.ribbon:disabled
+{
+	border-image-source:none; 
+	color:gray;
+}
+
+combobox.ribbon opener
+{
+	width:17px;
+	height:20px;
+	border-image-slice:6 5 6 5 fill;
+	border-image-width:6px 5px 6px 5px;
+	bg-image-sizing:default;
+	align:center;
+	vertical-align:center;
+}
+
+combobox.ribbon opener:normal
+{
+	border-image-source:none; 
+}
+
+combobox.ribbon opener:hot
+{
+	border-image-source:url('res:ListViewBorder'); 
+}
+
+combobox.ribbon opener:pressed
+{
+	border-image-source:url('res:ListViewBorder'); 
+}
+
+combobox.ribbon opener:disabled
+{
+	border-image-source:url('res:ListViewBorder'); 
+}
+
+combobox.ribbon opener_glyph
+{
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-attachment:fixed; 
+	align:center;
+	vertical-align:center;
+}
+
+combobox.ribbon opener_glyph:normal
+{
+	background-image:url('res:RibbonDropDownGlyph');
+}
+
+combobox.ribbon opener_glyph:hot
+{
+	background-image:url('res:RibbonDropDownGlyph'); 
+}
+
+combobox.ribbon opener_glyph:pressed
+{
+	background-image:url('res:RibbonDropDownGlyph'); 
+}
+
+combobox.ribbon opener_glyph:disabled
+{
+	background-image:url('res:RibbonDropDownGlyph'); 
+}

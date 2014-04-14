@@ -1,0 +1,559 @@
+
+@import "GUIThemeAero/theme.css";
+
+label.properties_header
+{
+	color: white;
+	background-color: #316ac5;
+	height: 16px;
+	padding-left: 4px;
+}
+
+label.properties_info
+{
+	color: gray;
+	background-color: #eeee53;
+	height: 16px;
+	padding-left: 4px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+}
+
+label.properties
+{
+	background-color:white;
+	width: 80px;
+	height: 22px;
+	padding-left: 4px;
+	color: blue;
+
+	border-color: gray;
+	border-bottom: 1px;
+	border-left: 1px;
+	border-top: 1px;
+}
+
+lineedit.properties
+{
+	background-image: none;
+	background-color: white;
+	height: 22px;
+
+	padding-left: 4px;
+	padding-right: 16px;
+	
+	border-color: gray;
+	border-left: 1px;
+	border-bottom: 1px;
+	border-right: 1px;
+	border-top: 1px;
+}
+
+lineedit.properties:disabled
+{
+	color: gray;
+	background-color: #f4f4f4;
+}
+
+textedit.properties
+{
+	background-image: none;
+	background-color: white;
+	height: 22px;
+
+	padding-left: 4px;
+	padding-right: 16px;
+	
+	border-color: gray;
+	border-left: 1px;
+	border-bottom: 1px;
+	border-right: 1px;
+	border-top: 1px;
+}
+
+textedit.properties:disabled
+{
+	color: gray;
+	background-color: #f4f4f4;
+}
+
+checkbox.properties
+{
+	background-image: none;
+	background-color: white;
+	height: 22px;
+
+	padding-top: 3px;
+	padding-left: 4px;
+	padding-right: 16px;
+	
+	border-color: gray;
+	border-left: 1px;
+	border-bottom: 1px;
+	border-right: 1px;
+	border-top: 1px;
+}
+
+property-component 
+{
+/*
+	border-image-slice: 3 3 3 3 fill;
+	border-image-width: 3px 3px 3px 3px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:PropertyComponent'); 
+    border-width: 1px;
+*/
+}
+
+property-component header
+{
+	border-image-slice: 2 2 2 2 fill;
+	border-image-width: 2px 2px 2px 2px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:ListViewHeader'); 
+    
+	height: 20px;
+}
+
+property-component header name, property-component header value
+{
+	border-image-slice: 9 3 14 2 fill;
+	border-image-width: 9px 3px 14px 2px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:ListViewColumnHeaderNormal'); 
+    
+	border-top: 3px;
+	border-left: 7px;
+	border-right: 3px;
+	border-bottom: 3px;
+}
+
+property-component row
+{
+	background-color: #ffffff;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+property-component row:alternate
+{
+	background-color: #eeeeee;
+	border-top: 0;
+	border-bottom: 0;
+}
+
+property-component item name
+{
+	color: black;
+    
+	width: 100px;
+	height: 17px;
+
+	padding-top: 2px;
+	padding-left: 4px;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+property-component item value
+{
+	color: black;
+    
+	width: 100px;
+	height: 17px;
+
+	padding-top: 2px;
+	padding-left: 4px;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+workspace
+{
+	background-color: #e1e6f6;
+}
+
+workspace empty-center
+{
+	background-color: #293955;
+}
+
+view-frame
+{
+	border-image-slice: 2 2 26 2 fill;
+	border-image-width: 2px 2px 26px 2px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:WorkspaceView'); 
+    
+	border-top: 1px;
+	border-left: 1px;
+	border-right: 1px;
+	border-bottom: 1px;
+}
+
+view-frame header
+{
+    height: 18px;
+    color: black;
+    
+	padding-top: 0;
+	padding-left: 4px;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
+tool-window
+{
+    background-color: #ffffff;
+}
+
+tool-window header
+{
+    height: 18px;
+    background-color: palegoldenrod;
+    color: black;
+    
+	padding-top: 2px;
+	padding-left: 7px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+}
+
+tool-window button-area
+{
+    width: 16px;
+	padding-top: 2px;
+	padding-right: 2px;
+}
+
+tool-window button
+{
+	background-image: url('res:ToolWindowClose');
+	background-position: center;
+	border-image: none;
+	border-width: 0px;
+}
+
+tool-window button:hot
+{
+	background-image: url('res:ToolWindowCloseHot');
+}
+
+listview.borderless
+{
+	border-image: none;
+}
+
+listview_header.hidden
+{
+	height: 0;
+}
+
+listview row:details
+{
+    background-color: white;
+}
+
+listview row:icons
+{
+    background-color: white;
+}
+
+listview row:alternate
+{
+    background-color: white;
+}
+
+listview row:icons
+{
+    background-color: white;
+}
+
+document-dock
+{
+	border-image-slice: 26 6 20 6 fill;
+	border-image-width: 26px 6px 20px 6px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:DocumentDockBackground'); 
+    
+	padding-top: 24px;
+	padding-left: 1px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+}
+
+document-dock tab
+{
+    height: 24px;
+
+ 	border-image-slice: 0 6 0 6 fill;
+	border-image-width: 0px 6px 0px 6px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:DocumentDockTab'); 
+    
+	padding-top: 4px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+   
+    color:black;
+}
+
+document-dock button
+{
+    border-image: none;
+    background-image: url('res:ToolWindowClose');
+    background-position: center;
+    border-width: 0px;
+}
+
+document-dock button:hot
+{
+    background-image: url('res:ToolWindowCloseHot');
+}
+
+
+tab-dock
+{
+ 	border-image-slice: 20 6 22 6 fill;
+	border-image-width: 20px 6px 22px 6px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:TabDockBackground'); 
+    
+	padding-top: 0;
+	padding-left: 1px;
+	padding-right: 2px;
+	padding-bottom: 22px;
+}
+
+tab-dock tab
+{
+    height: 20px;
+    
+ 	border-image-slice: 0 6 0 6 fill;
+	border-image-width: 0px 6px 0px 6px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:TabDockTab'); 
+	
+    color: black;
+    
+	padding-top: 2px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 2px;
+}
+
+tab-dock header
+{
+    height: 18px;
+    color: black;
+    
+	padding-top: 4px;
+	padding-left: 7px;
+	padding-right: 2px;
+	padding-bottom: 2px;
+}
+
+tab-dock button-area
+{
+    width: 16px;
+	padding-top: 2px;
+	padding-right: 2px;
+}
+
+tab-dock button
+{
+    border-image: none;
+    background-image: url('res:ToolWindowClose');
+    background-position: center;
+    border-left:0;
+    border-right:0;
+    border-top:0;
+    border-bottom:0;
+}
+
+tab-dock button:hot
+{
+    background-image: url('res:ToolWindowCloseHot');
+}
+
+dock-icons-overlay up
+{
+    background-image: url('res:OverlayDockUp');
+    width: 29px;
+    height: 32px;
+}
+
+dock-icons-overlay down
+{
+    background-image: url('res:OverlayDockDown');
+    width: 29px;
+    height: 32px;
+}
+
+dock-icons-overlay left
+{
+    background-image: url('res:OverlayDockLeft');
+    width: 29px;
+    height: 32px;
+}
+
+dock-icons-overlay right
+{
+    background-image: url('res:OverlayDockRight');
+    width: 29px;
+    height: 32px;
+}
+
+dock-icons-overlay center
+{
+    background-image: url('res:OverlayDockCenter');
+    width: 29px;
+    height: 32px;
+}
+
+ribbon-section button.big
+{
+    text-align: center;
+}
+
+ribbon-section button:hot
+{
+ 	border-image-slice: 4 8 4 8 fill;
+	border-image-width: 4px 8px 4px 8px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:RibbonButtonHot'); 
+}
+
+ribbon-section button.dropdown
+{
+ 	border-image-slice: 3 12 3 3 fill;
+	border-image-width: 3px 12px 3px 3px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:RibbonDropDownButton'); 
+    
+    padding-left: 4px;
+    padding-right: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    text-align: left;
+}
+
+ribbon-section button.dropdown:hot
+{
+	border-image-source: url('res:RibbonDropDownButtonHot'); 
+}
+
+
+combobox.ribbon
+{
+ 	border-image-slice: 3 3 3 3 fill;
+	border-image-width: 3px 3px 3px 3px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:ListViewBorder'); 
+}
+
+combobox lineedit.ribbon
+{
+	border-image: none;
+	background-color: transparent;
+	background-image: none;
+    
+	border-top:0;
+	border-left:6px;
+	border-right:16px;
+	border-bottom:0;
+	
+	color:black;
+	/*text-color-selected:white;*/
+}
+
+combobox lineedit.ribbon:normal
+{
+	border-image-source: none;
+}
+
+combobox lineedit.ribbon:hot
+{
+	border-image-source: none;
+}
+
+combobox lineedit.ribbon:disabled
+{
+	border-image-source: none;
+	color:gray;
+}
+
+combobox.ribbon opener
+{
+	width: 17px;
+	height: 20px;
+
+ 	border-image-slice: 6 5 6 5 fill;
+	border-image-width: 6px 5px 6px 5px;
+	border-image-repeat: stretch;
+
+	text-align: center;
+	vertical-align: middle;
+}
+
+combobox.ribbon opener:normal
+{
+	border-image-source: none;
+}
+
+combobox.ribbon opener:hot
+{
+	border-image-source: url('res:ListViewBorder');
+}
+
+combobox.ribbon opener:pressed
+{
+	border-image-source: url('res:ListViewBorder');
+}
+
+combobox.ribbon opener:disabled
+{
+	border-image-source: url('res:ListViewBorder');
+}
+
+combobox.ribbon opener_glyph
+{
+    background-position: center;
+	text-align: center;
+	vertical-align: middle;
+}
+
+combobox.ribbon opener_glyph:normal
+{
+	background-image: url('res:RibbonDropDownGlyph');
+}
+
+combobox.ribbon opener_glyph:hot
+{
+	background-image: url('res:RibbonDropDownGlyph');
+}
+
+combobox.ribbon opener_glyph:pressed
+{
+	background-image: url('res:RibbonDropDownGlyph');
+}
+
+combobox.ribbon opener_glyph:disabled
+{
+	background-image: url('res:RibbonDropDownGlyph');
+}
+
+curve-editor
+{
+ 	border-image-slice: 6 5 6 5 fill;
+	border-image-width: 6px 5px 6px 5px;
+	border-image-repeat: stretch;
+	border-image-source: url('res:ListViewBorder'); 
+
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}

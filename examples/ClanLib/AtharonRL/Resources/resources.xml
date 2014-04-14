@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<section name="UI">
+		<image name="button_normal"><image-file file="Engine/GUIThemeAero/Images/button_normal.png" /></image>
+		<image name="lineedit_normal"><image-file file="Engine/GUIThemeAero/Images/lineedit_normal.png" /></image>
+		<image name="xp_frame"><image-file file="Engine/GUIThemeAero/Images/XP/frame.png" /></image>
+	</section>
+	<section name="Background">
+		<image name="login"><image-file file="Backgrounds/Login.png" /></image>
+	</section>
+	<section name="Music">
+		<sample name="main_theme" file="Music/DarkWinds_0.OGG" format="" stream="true"/>
+	</section>
+</resources>

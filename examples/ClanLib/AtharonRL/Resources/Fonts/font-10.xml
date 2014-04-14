@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<resources>
+	<section name="Font">
+		<sprite name="font-10">
+			<image file="font-10.png">
+				<grid pos="0,0" size="16,29" array="16,16"/>
+			</image>
+		</sprite>
+	</section>
+</resources>
