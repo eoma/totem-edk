@@ -17,7 +17,7 @@ public:
 	PropertyType value;
 	std::string name;
 	bool dirty;
-	sigslot::signal2<const PropertyType &, const PropertyType &> valueChanged;
+	sigslot::signal<const PropertyType &, const PropertyType &> valueChanged;
 };
 
 template<class PropertyType>
@@ -37,7 +37,7 @@ public:
 	void clearDirty() override;
 	unsigned int getRuntimeTypeId() const override;
 
-	sigslot::signal2<const PropertyType &, const PropertyType &> &valueChanged();
+	sigslot::signal<const PropertyType &, const PropertyType &> &valueChanged();
 
 	Property<PropertyType> operator= (const Property<PropertyType>& rhs);
 	Property<PropertyType> operator= (const PropertyType& rhs);

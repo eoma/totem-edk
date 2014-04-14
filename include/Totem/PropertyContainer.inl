@@ -105,25 +105,25 @@ inline PropertyContainer<UserData> &PropertyContainer<UserData>::operator= (cons
 }
 
 template<class UserData>
-inline sigslot::signal1<std::shared_ptr<IProperty>> &PropertyContainer<UserData>::propertyAdded() 
+inline sigslot::signal<std::shared_ptr<IProperty>> &PropertyContainer<UserData>::propertyAdded() 
 { 
 	return sign_PropertyAdded; 
 }
 
 template<class UserData>
-inline sigslot::signal2<std::shared_ptr<IProperty>, const UserData&> &PropertyContainer<UserData>::propertyWithUserDataAdded() 
+inline sigslot::signal<std::shared_ptr<IProperty>, const UserData&> &PropertyContainer<UserData>::propertyWithUserDataAdded() 
 { 
 	return sign_PropertyWithUserDataAdded; 
 }
 
 template<class UserData>
-inline sigslot::signal1<std::shared_ptr<IProperty>> &PropertyContainer<UserData>::propertyRemoved() 
+inline sigslot::signal<std::shared_ptr<IProperty>> &PropertyContainer<UserData>::propertyRemoved() 
 { 
 	return sign_PropertyRemoved; 
 }
 
 template<class UserData>
-inline sigslot::signal2<std::shared_ptr<IProperty>, const UserData&> &PropertyContainer<UserData>::propertyWithUserDataRemoved()
+inline sigslot::signal<std::shared_ptr<IProperty>, const UserData&> &PropertyContainer<UserData>::propertyWithUserDataRemoved()
 {
 	return sign_PropertyWithUserDataRemoved;
 }

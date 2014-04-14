@@ -52,7 +52,7 @@ template<class PropertyType>
 inline void Property<PropertyType>::clearDirty() { data->dirty = false; }
 
 template<class PropertyType>
-inline sigslot::signal2<const PropertyType &, const PropertyType &> &Property<PropertyType>::valueChanged() { return data->valueChanged; }
+inline sigslot::signal<const PropertyType &, const PropertyType &> &Property<PropertyType>::valueChanged() { return data->valueChanged; }
 
 /// Instead of property.get() this operator exist for convenience.
 template<class PropertyType>

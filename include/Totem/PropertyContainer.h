@@ -44,19 +44,19 @@ public:
 
 	PropertyContainer &operator= (const PropertyContainer &rhs);
 
-	sigslot::signal1<std::shared_ptr<IProperty>> &propertyAdded();
-	sigslot::signal2<std::shared_ptr<IProperty>, const UserData&> &propertyWithUserDataAdded();
-	sigslot::signal1<std::shared_ptr<IProperty>> &propertyRemoved();
-	sigslot::signal2<std::shared_ptr<IProperty>, const UserData&> &propertyWithUserDataRemoved();
+	sigslot::signal<std::shared_ptr<IProperty>> &propertyAdded();
+	sigslot::signal<std::shared_ptr<IProperty>, const UserData&> &propertyWithUserDataAdded();
+	sigslot::signal<std::shared_ptr<IProperty>> &propertyRemoved();
+	sigslot::signal<std::shared_ptr<IProperty>, const UserData&> &propertyWithUserDataRemoved();
 
 protected:
 	std::unordered_map<std::string, std::shared_ptr<IProperty>> properties;
 	std::vector<std::shared_ptr<IProperty>> deletedProperties;
 
-	sigslot::signal1<std::shared_ptr<IProperty>> sign_PropertyAdded;
-	sigslot::signal2<std::shared_ptr<IProperty>, const UserData&> sign_PropertyWithUserDataAdded;
-	sigslot::signal1<std::shared_ptr<IProperty>> sign_PropertyRemoved;
-	sigslot::signal2<std::shared_ptr<IProperty>, const UserData&> sign_PropertyWithUserDataRemoved;
+	sigslot::signal<std::shared_ptr<IProperty>> sign_PropertyAdded;
+	sigslot::signal<std::shared_ptr<IProperty>, const UserData&> sign_PropertyWithUserDataAdded;
+	sigslot::signal<std::shared_ptr<IProperty>> sign_PropertyRemoved;
+	sigslot::signal<std::shared_ptr<IProperty>, const UserData&> sign_PropertyWithUserDataRemoved;
 };
 
 #include "PropertyContainer.inl"

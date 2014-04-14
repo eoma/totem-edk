@@ -107,25 +107,25 @@ PropertyListContainer<UserData> &PropertyListContainer<UserData>::operator= (con
 }
 
 template<class UserData>
-sigslot::signal1<std::shared_ptr<IPropertyList>> &PropertyListContainer<UserData>::propertyListAdded() 
+sigslot::signal<std::shared_ptr<IPropertyList>> &PropertyListContainer<UserData>::propertyListAdded() 
 {
 	return sign_PropertyListAdded;
 }
 
 template<class UserData>
-sigslot::signal2<std::shared_ptr<IPropertyList>, const UserData&> &PropertyListContainer<UserData>::propertyListWithUserDataAdded() 
+sigslot::signal<std::shared_ptr<IPropertyList>, const UserData&> &PropertyListContainer<UserData>::propertyListWithUserDataAdded() 
 {
 	return sign_PropertyListWithUserDataAdded; 
 }
 
 template<class UserData>
-sigslot::signal1<std::shared_ptr<IPropertyList>> &PropertyListContainer<UserData>::propertyListRemoved()
+sigslot::signal<std::shared_ptr<IPropertyList>> &PropertyListContainer<UserData>::propertyListRemoved()
 {
 	return sign_PropertyListRemoved;
 }
 
 template<class UserData>
-sigslot::signal2<std::shared_ptr<IPropertyList>, const UserData&> &PropertyListContainer<UserData>::propertyListWithUserDataRemoved()
+sigslot::signal<std::shared_ptr<IPropertyList>, const UserData&> &PropertyListContainer<UserData>::propertyListWithUserDataRemoved()
 {
 	return sign_PropertyListWithUserDataRemoved;
 }

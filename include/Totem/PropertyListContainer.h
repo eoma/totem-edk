@@ -44,19 +44,19 @@ public:
 
 	PropertyListContainer &operator= (const PropertyListContainer &rhs);
 
-	sigslot::signal1<std::shared_ptr<IPropertyList>> &propertyListAdded();
-	sigslot::signal2<std::shared_ptr<IPropertyList>, const UserData&> &propertyListWithUserDataAdded();
-	sigslot::signal1<std::shared_ptr<IPropertyList>> &propertyListRemoved();
-	sigslot::signal2<std::shared_ptr<IPropertyList>, const UserData&> &propertyListWithUserDataRemoved();
+	sigslot::signal<std::shared_ptr<IPropertyList>> &propertyListAdded();
+	sigslot::signal<std::shared_ptr<IPropertyList>, const UserData&> &propertyListWithUserDataAdded();
+	sigslot::signal<std::shared_ptr<IPropertyList>> &propertyListRemoved();
+	sigslot::signal<std::shared_ptr<IPropertyList>, const UserData&> &propertyListWithUserDataRemoved();
 
 protected:
 	std::unordered_map<std::string, std::shared_ptr<IPropertyList>> propertyLists;
 	std::vector<std::shared_ptr<IPropertyList>> deletedPropertyLists;
 
-	sigslot::signal1<std::shared_ptr<IPropertyList>> sign_PropertyListAdded;
-	sigslot::signal2<std::shared_ptr<IPropertyList>, const UserData&> sign_PropertyListWithUserDataAdded;
-	sigslot::signal1<std::shared_ptr<IPropertyList>> sign_PropertyListRemoved;
-	sigslot::signal2<std::shared_ptr<IPropertyList>, const UserData&> sign_PropertyListWithUserDataRemoved;
+	sigslot::signal<std::shared_ptr<IPropertyList>> sign_PropertyListAdded;
+	sigslot::signal<std::shared_ptr<IPropertyList>, const UserData&> sign_PropertyListWithUserDataAdded;
+	sigslot::signal<std::shared_ptr<IPropertyList>> sign_PropertyListRemoved;
+	sigslot::signal<std::shared_ptr<IPropertyList>, const UserData&> sign_PropertyListWithUserDataRemoved;
 };
 
 #include "PropertyListContainer.inl"

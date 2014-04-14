@@ -27,8 +27,8 @@ public:
 	void updateComponents(float elapsedTime);
 	template<class ComponentType> void removeComponent(const std::string &name = std::string(), bool upholdOrderInList = false);
 
-	sigslot::signal1<std::shared_ptr<IComponent<UserData>>> &componentAdded();
-	sigslot::signal1<std::shared_ptr<IComponent<UserData>>> &componentRemoved();
+	sigslot::signal<std::shared_ptr<IComponent<UserData>>> &componentAdded();
+	sigslot::signal<std::shared_ptr<IComponent<UserData>>> &componentRemoved();
 
 protected:
 	void checkDuplicationAndAdd(unsigned int typeId, const std::string &name);
@@ -36,8 +36,8 @@ protected:
 	std::unordered_map<unsigned int, std::vector<std::string>> namesForComponentTypes;
 	std::vector<std::shared_ptr<IComponent<UserData>>> components;
 
-	sigslot::signal1<std::shared_ptr<IComponent<UserData>>> sign_ComponentAdded;
-	sigslot::signal1<std::shared_ptr<IComponent<UserData>>> sign_ComponentRemoved;
+	sigslot::signal<std::shared_ptr<IComponent<UserData>>> sign_ComponentAdded;
+	sigslot::signal<std::shared_ptr<IComponent<UserData>>> sign_ComponentRemoved;
 };
 
 #include "ComponentContainer.inl"

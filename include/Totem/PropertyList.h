@@ -18,11 +18,11 @@ public:
 	std::vector<PropertyType> value;
 	std::string name;
 	bool dirty;
-	sigslot::signal3<unsigned int, const PropertyType &, const PropertyType &> valueChanged;
-	sigslot::signal2<unsigned int, const PropertyType &> valueAdded;
-	sigslot::signal2<unsigned int, const PropertyType &> valueErased;
-	sigslot::signal0<> valuesCleared;
-	sigslot::signal2<unsigned int, unsigned int> listResized;
+	sigslot::signal<unsigned int, const PropertyType &, const PropertyType &> valueChanged;
+	sigslot::signal<unsigned int, const PropertyType &> valueAdded;
+	sigslot::signal<unsigned int, const PropertyType &> valueErased;
+	sigslot::signal<> valuesCleared;
+	sigslot::signal<unsigned int, unsigned int> listResized;
 };
 
 template<class PropertyType>
@@ -78,11 +78,11 @@ public:
 	bool isDirty() const override;
 	void clearDirty() override;
 
-	sigslot::signal3<unsigned int, const PropertyType &, const PropertyType &> &valueChanged();
-	sigslot::signal2<unsigned int, const PropertyType &> &valueAdded();
-	sigslot::signal2<unsigned int, const PropertyType &> &valueErased();
-	sigslot::signal0<> &valuesCleared();
-	sigslot::signal2<unsigned int, unsigned int> &listResized();
+	sigslot::signal<unsigned int, const PropertyType &, const PropertyType &> &valueChanged();
+	sigslot::signal<unsigned int, const PropertyType &> &valueAdded();
+	sigslot::signal<unsigned int, const PropertyType &> &valueErased();
+	sigslot::signal<> &valuesCleared();
+	sigslot::signal<unsigned int, unsigned int> &listResized();
 
 	PropertyList<PropertyType> operator= (const PropertyList<PropertyType>& rhs);
 	PropertyListIndexValue<PropertyType> operator[] (const unsigned int& index);

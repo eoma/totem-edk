@@ -129,13 +129,13 @@ void ComponentContainer<UserData>::removeComponent(const std::string &name, bool
 }
 
 template<class UserData>
-sigslot::signal1<std::shared_ptr<IComponent<UserData>>> &ComponentContainer<UserData>::componentAdded() 
+sigslot::signal<std::shared_ptr<IComponent<UserData>>> &ComponentContainer<UserData>::componentAdded() 
 { 
 	return sign_ComponentAdded; 
 }
 
 template<class UserData>
-sigslot::signal1<std::shared_ptr<IComponent<UserData>>> &ComponentContainer<UserData>::componentRemoved() 
+sigslot::signal<std::shared_ptr<IComponent<UserData>>> &ComponentContainer<UserData>::componentRemoved() 
 { 
 	return sign_ComponentRemoved; 
 }

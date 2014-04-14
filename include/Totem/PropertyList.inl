@@ -236,31 +236,31 @@ void PropertyList<PropertyType>::clearDirty()
 }
 
 template<class PropertyType>
-sigslot::signal3<unsigned int, const PropertyType &, const PropertyType &> &PropertyList<PropertyType>::valueChanged() 
+sigslot::signal<unsigned int, const PropertyType &, const PropertyType &> &PropertyList<PropertyType>::valueChanged() 
 { 
 	return data->valueChanged; 
 }
 
 template<class PropertyType>
-sigslot::signal2<unsigned int, const PropertyType &> &PropertyList<PropertyType>::valueAdded() 
+sigslot::signal<unsigned int, const PropertyType &> &PropertyList<PropertyType>::valueAdded() 
 {
 	return data->valueAdded;
 }
 
 template<class PropertyType>
-sigslot::signal2<unsigned int, const PropertyType &> &PropertyList<PropertyType>::valueErased() 
+sigslot::signal<unsigned int, const PropertyType &> &PropertyList<PropertyType>::valueErased() 
 { 
 	return data->valueErased;
 }
 
 template<class PropertyType>
-sigslot::signal0<> &PropertyList<PropertyType>::valuesCleared() 
+sigslot::signal<> &PropertyList<PropertyType>::valuesCleared() 
 { 
 	return data->valuesCleared; 
 }
 
 template<class PropertyType>
-sigslot::signal2<unsigned int, unsigned int> &PropertyList<PropertyType>::listResized()
+sigslot::signal<unsigned int, unsigned int> &PropertyList<PropertyType>::listResized()
 {
 	return data->listResized; 
 }
