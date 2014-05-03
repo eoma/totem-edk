@@ -41,14 +41,14 @@ set(TOTEM_HDRS
 )
 SOURCE_GROUP("Header Files\\Totem" FILES ${TOTEM_HDRS})
 
-set(TOTEM_ADDONS_HDRS
-  ../../../editions/ClanLib/include/Totem/Addons/EventSystem.h
+set(TOTEM_EXT_HDRS
+  ../../../editions/ClanLib/include/Totem/Extensions/EventSystem.h
 )
-SOURCE_GROUP("Header Files\\Totem\\Addons" FILES ${TOTEM_ADDONS_HDRS})
+SOURCE_GROUP("Header Files\\Totem\\Extensions" FILES ${TOTEM_EXT_HDRS})
 
 set(HDRS
   ${TOTEM_HDRS}
-  ${TOTEM_ADDONS_HDRS}
+  ${TOTEM_EXT_HDRS}
   ../Common/Entity.h
   ./TestSystem.h
   ./TestComponent.h

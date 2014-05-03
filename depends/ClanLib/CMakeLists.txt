@@ -29,20 +29,22 @@ cmake_minimum_required(VERSION 2.8)
 
 empty_preprocess_pair_list()
 
-add_preprocess_pair("std::string" 							"CL_String")
+#add_preprocess_pair("std::string" 							"CL_String")
 
-add_preprocess_pair("std::runtime_error" 						"CL_Exception")
+add_preprocess_pair("std::runtime_error" 						"clan::Exception")
 add_preprocess_pair(": public sigslot::has_slots<>, " 	": ")
 add_preprocess_pair(": public sigslot::has_slots<>" 	" ")
 add_preprocess_pair(", public sigslot::has_slots<>" 	" ")
 add_preprocess_pair("public sigslot::has_slots<>" 	" ")
-add_preprocess_pair("sigslot::signal0<>" 		"CL_Signal_v0")
+#add_preprocess_pair("sigslot::signal0<>" 		"CL_Signal_v0")
+add_preprocess_pair("sigslot::signal0<>" 		"clan::Signal<>")
 add_preprocess_pair(".bind(" 							".set(")
 add_preprocess_pair("delegate->delegate(" 				"delegate->delegate.invoke(")
 
 #add_preprocess_pair("std::shared_ptr" 				"CL_SharedPtr")
 
-add_preprocess_pair_regex("sigslot::signal(.)"		"CL_Signal_v\\\\1")
+#add_preprocess_pair_regex("sigslot::signal(.)"		"CL_Signal_v\\\\1")
+add_preprocess_pair_regex("sigslot::signal(.)"		"clan::Signal")
 
 add_preprocess_pair("#include <string>"		" ")
 add_preprocess_pair("#include <memory>"		" ")

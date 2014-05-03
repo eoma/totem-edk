@@ -14,12 +14,12 @@ typedef std::shared_ptr<TestComponent> TestComponentPtr;
 class TestComponent : public Totem::Component<TestComponent, PropertyUserData>
 {
 public:
-	TestComponent(const EntityPtr &owner, const CL_String &name, const TestSystemPtr &sys);
+	TestComponent(const EntityPtr &owner, const std::string &name, const TestSystemPtr &sys);
         
 	void test();
 
 private:
-	void OnSharedPropChanged(const CL_String &old_value, const CL_String &new_value);
+	void OnSharedPropChanged(const std::string &old_value, const std::string &new_value);
 
 	EntityWPtr owner;
 	TestSystemPtr sys;
@@ -27,8 +27,8 @@ private:
 	void OnSomeEvent();
 
 	PropertyUserData user_data;
-	Totem::Property<CL_String> test_prop;
-	Totem::Property<CL_String> test_shared_prop;
+	Totem::Property<std::string> test_prop;
+	Totem::Property<std::string> test_shared_prop;
 
-	CL_SlotContainer slots;
+	clan::CallbackContainer slots;
 };

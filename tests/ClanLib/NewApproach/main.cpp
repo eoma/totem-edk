@@ -33,7 +33,7 @@ requirements or restrictions.
 #include "../../../editions/ClanLib/include/Totem/PropertyListContainer.h"
 #include "../../../editions/ClanLib/include/Totem/HashedString.h"
 
-#include "../../../editions/ClanLib/include/Totem/Addons/EventSystem.h"
+#include "../../../editions/ClanLib/include/Totem/Extensions/EventSystem.h"
 
 #include "TestSystem.h"
 #include "TestComponent.h"
@@ -88,10 +88,16 @@ void main()
 
         EntityPtr entity = std::make_shared<Entity>("TestEntity");
 		auto entityCallback = std::make_shared<EntityCallback>();
-		CL_SlotContainer slots;
-		slots.connect(entity->componentAdded(), entityCallback.get(), &EntityCallback::onComponentAdded);
-		slots.connect(entity->propertyWithUserDataAdded(), entityCallback.get(), &EntityCallback::onPropertyAdded);
-		slots.connect(entity->propertyListWithUserDataAdded(), entityCallback.get(), &EntityCallback::onPropertyListAdded);
+		clan::CallbackContainer slots;
+		slots.connect(entity->componentAdded(), 
+			clan::Callback<void(std::shared_ptr<Totem::IComponent<PropertyUserData>>)>(
+			entityCallback.get(), &EntityCallback::onComponentAdded));
+		slots.connect(entity->propertyWithUserDataAdded(), 
+			clan::Callback<void(std::shared_ptr<Totem::IProperty>, const PropertyUserData &)>(
+			entityCallback.get(), &EntityCallback::onPropertyAdded));
+		slots.connect(entity->propertyListWithUserDataAdded(), 
+			clan::Callback<void(std::shared_ptr<Totem::IPropertyList>, const PropertyUserData &)>(
+			entityCallback.get(), &EntityCallback::onPropertyListAdded));
 
 		auto testComp0 = entity->addComponent(std::make_shared<TestComponent>(entity, "Test0", sys));
 		auto testComp1 = entity->addComponent<TestComponent>(std::make_shared<TestComponent>(entity, "Test1", sys));
@@ -102,12 +108,12 @@ void main()
 		//testComp0->test(); //<- this is a shared_ptr to an IComponent, so we can't call test() function.
 		testComp1->test();
                         
-        auto test_prop = testComp0->get<CL_String>("TestProp");
+        auto test_prop = testComp0->get<std::string>("TestProp");
         std::cout << test_prop.get().c_str() << " from " << testComp0->getName().c_str() << std::endl;
-        auto test_prop2 = testComp1->get<CL_String>("TestProp");
+        auto test_prop2 = testComp1->get<std::string>("TestProp");
         std::cout << test_prop2.get().c_str() << " from " << testComp1->getName().c_str() << std::endl;
         
-        auto test_shared_prop = entity->get<CL_String>("TestSharedProp");
+        auto test_shared_prop = entity->get<std::string>("TestSharedProp");
         std::cout << test_shared_prop.get().c_str() << std::endl;
         test_shared_prop = "Test Shared Property Value Changed";
 
@@ -116,9 +122,9 @@ void main()
         auto list = entity->addList<int>("TestList");
 
 		auto listCallback = std::make_shared<ListCallback>();
-		CL_Slot valueAddedSlot = list.valueAdded().connect(listCallback.get(), &ListCallback::onValueAddedToList);
-        CL_Slot valueErasedSlot = list.valueErased().connect(listCallback.get(), &ListCallback::onValueErasedFromList);
-        CL_Slot valuesClearedSlot = list.valuesCleared().connect(listCallback.get(), &ListCallback::onValuesClearedFromList);
+		list.valueAdded().connect(clan::Callback<void(unsigned int, const int &)>(listCallback.get(), &ListCallback::onValueAddedToList));
+		list.valueErased().connect(clan::Callback<void(unsigned int, const int &)>(listCallback.get(), &ListCallback::onValueErasedFromList));
+		list.valuesCleared().connect(clan::Callback<void()>(listCallback.get(), &ListCallback::onValuesClearedFromList));
         list.push_back(1);
         list.push_back(2);
         list.push_back(3);

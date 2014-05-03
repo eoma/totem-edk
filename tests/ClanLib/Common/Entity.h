@@ -31,7 +31,7 @@ requirements or restrictions.
 #include "../../../editions/ClanLib/include/Totem/ComponentContainer.h"
 #include "../../../editions/ClanLib/include/Totem/PropertyContainer.h"
 #include "../../../editions/ClanLib/include/Totem/PropertyListContainer.h"
-#include "../../../editions/ClanLib/include/Totem/Addons/EventSystem.h"
+#include "../../../editions/ClanLib/include/Totem/Extensions/EventSystem.h"
 
 class Entity;
 typedef std::shared_ptr<Entity> EntityPtr;
@@ -47,13 +47,13 @@ class Entity
 	:	public Totem::ComponentContainer<PropertyUserData>, 
 		public Totem::PropertyContainer<PropertyUserData>, 
 		public Totem::PropertyListContainer<PropertyUserData>, 
-		public Totem::Addon::EventSystem<>
+		public Totem::EventSystem<>
 {
 public:	
-	Entity(const CL_String &name) : name(name) {}
-	const CL_String &getName() const { return name; }
+	Entity(const std::string &name) : name(name) {}
+	const std::string &getName() const { return name; }
 private:
-	CL_String name;
+	std::string name;
 };
 
 #pragma warning(pop)
