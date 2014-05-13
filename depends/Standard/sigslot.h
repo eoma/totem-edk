@@ -613,8 +613,13 @@ namespace sigslot {
 	};
 
 	// This is the variadic signal template you'll likely want to use
+#ifdef _MSC_VER
+	template <class... Ts, typename U = signal_variadic<SIGSLOT_DEFAULT_MT_POLICY, Ts...>>
+	using signal = U;
+#else
 	template <class... Ts>
 	using signal = signal_variadic<SIGSLOT_DEFAULT_MT_POLICY, Ts...>;
+#endif
 
 	//
 	// Compatibility
