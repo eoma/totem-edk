@@ -612,11 +612,14 @@ namespace sigslot {
 		}
 	};
 
-	// This is the variadic signal template you'll likely want to use
-#ifdef _MSC_VER
+#if defined _MSC_VER && _MSC_VER < 1800
+#error Visual Studio 2013 required, preferably of Update 2 or higher!
+#elif defined _MSC_VER && _MSC_VER >= 1800 && _MSC_FULL_VER < 180030501 
+	//Need to apply workaround if this is not of VC2013 Update 2 or higher.
 	template <class... Ts, typename U = signal_variadic<SIGSLOT_DEFAULT_MT_POLICY, Ts...>>
 	using signal = U;
 #else
+	// This is the variadic signal template you'll want to use
 	template <class... Ts>
 	using signal = signal_variadic<SIGSLOT_DEFAULT_MT_POLICY, Ts...>;
 #endif
